@@ -12,8 +12,8 @@ const user = new User();
 // Product instance
 const product = new Product();
 
-route.get('^/$|/capstone', (req, res)=>{
-    res.status(200).sendFile(path.join(__dirname, '../view/index.html'));
+route.get('^/$|/capstoneproject', (req, res)=>{
+    res.status(200).sendFile(path.join(__dirname, '../views/index.html'));
 })
 // =========USER's Router========
 // Login
