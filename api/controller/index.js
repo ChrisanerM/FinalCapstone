@@ -63,5 +63,32 @@ route.delete('/product/:id',
 (req, res)=> {
     product.deleteProduct(req, res);
 })
+// =====Cart======
+// Fetch all products
+route.get('/cart', (req, res)=> {
+    product.fetchProducts(req, res);
+})
+// Fetch a single product
+route.get('/cart/:id', 
+(req, res)=> {
+    product.fetchProduct(req, res);
+})
+// Add a new product
+route.post('/cart', 
+bodyParser.json(), 
+(req, res)=> {
+    product.addProduct(req, res);
+})
+// Update a product
+route.put('/cart/:id', 
+bodyParser.json(),
+(req, res)=> {
+    product.updateProduct(req, res);
+})
+// Delete a product
+route.delete('/cart/:id', 
+(req, res)=> {
+    product.deleteProduct(req, res);
+})
 
 module.exports = route;
