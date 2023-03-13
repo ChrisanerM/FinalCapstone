@@ -1,6 +1,6 @@
 import { createStore } from 'vuex'
 import axios from 'axios';
-const apricityURL='https://finalcapstone.onrender.com'; 
+const apricityURL='https://finalcapstone.onrender.com/'; 
 export default createStore({
   state: {
     users:null,
