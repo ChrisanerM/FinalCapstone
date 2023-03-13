@@ -1,6 +1,6 @@
 <template>
     
-    <div class="nav justify-content-start">
+    <div class="nav justify-content-start logo">
       <img src="https://i.postimg.cc/760tLqm1/Apricity-Camp-logo.jpg" style="width:145px; padding-top:5px;">
     </div>
   
@@ -49,7 +49,7 @@
   <style scoped>
   
   * {
-    margin: 0;
+    margin:0;
   }
   
   .nav-item {
@@ -80,8 +80,7 @@
 .nav {
   background-color: #f9f3c0;
   height:75px;
-  
-}
+  }
 
 img{
   height: 20vh;
