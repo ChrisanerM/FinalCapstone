@@ -40,7 +40,7 @@ const routes = [
   {
     path: '/singleview',
     name: 'singleview',
-    component: () => import( '../views/AboutView.vue')
+    component: () => import( '../views/SingleProductsView.vue')
   }
 ]
 
