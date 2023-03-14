@@ -21,8 +21,9 @@
             <p class="name">{{ product.prodName }}</p>
             <p class="price">R{{ product.price }}</p>
             <!-- <RouterLink> -->
-<button class="view"><router-link to="/singleview"> View more
-</router-link></button>
+            <button class="view">
+              <router-link to="/singleview"> View more </router-link>
+            </button>
             <!-- </RouterLink> -->
           </div>
         </div>
@@ -32,7 +33,6 @@
 </template>
 
 <script>
-
 import { computed } from "@vue/runtime-core";
 import { useStore } from "vuex";
 export default {
