@@ -43,6 +43,17 @@ export default createStore({
         context.commit('setMessage',err)
       }
   },
+  
+  async createUser (context,payload){
+    const res= await axios.post(`${apricityURL}register`,payload);
+    const {msg,err} = await res.data;
+    if (msg){
+      context.commit('setMessage',msg)
+    } else {
+      context.commit('setMessage', err)
+    }
+},
+    
 
 },
   modules: {
