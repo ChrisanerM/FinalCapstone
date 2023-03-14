@@ -79,7 +79,7 @@
 
 .nav {
   background-color: #f9f3c0;
-  height:6px;
+  height:74px;
   }
 
 img{
