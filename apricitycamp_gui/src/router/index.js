@@ -38,7 +38,7 @@ const routes = [
     component: () => import( '../views/CartView.vue')
   },
   {
-    path: '/singleview',
+    path: '/singleview/:id',
     name: 'singleview',
     component: () => import( '../views/SingleProductsView.vue')
   }
