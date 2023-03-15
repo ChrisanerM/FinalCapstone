@@ -1,10 +1,8 @@
 <template>
-   <div class="card" 
-   v-for="product in products"
-   :key="product.id"
+   <div class="card"
    style="width: 18rem;">
   <img
-  :src="product.imgURL" class="card-img-top" alt="...">
+  :src="product.imgURL" class="card-img-top" :alt="product.category">
   <div class="card-body">
     <p class="card-text">Description:{{ product.prodDescription }}</p>
     <p class="card-text">Category:{{ product.category }}</p>
@@ -21,12 +19,14 @@ import { useStore } from "vuex";
 export default {
   setup() {
     const store = useStore();
-    store.dispatch("fetchProducts");
-    const products = computed(() => store.state.products);
+    const product = computed(() => store.state.product);
     return {
-      products,
+      product,
     };
   },
+  created() {
+    this.$store.dispatch("fetchProduct", this.$route.params.id);
+  }
 };
 </script>
 
