@@ -22,7 +22,7 @@
             <p class="price">R{{ product.price }}</p>
             <!-- <RouterLink> -->
             <button class="view">
-              <router-link to="/singleview"> View more </router-link>
+              <router-link :to="{name: 'singleview', params: {id: product.id}}"> View more </router-link>
             </button>
             <!-- </RouterLink> -->
           </div>
