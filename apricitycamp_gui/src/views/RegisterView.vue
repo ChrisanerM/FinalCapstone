@@ -1,12 +1,14 @@
 <template>
-  <form>
+  <form @submit.prevent="register">
     <p>First Name:</p>
-    <input type="text" placeholder="Enter Your Name" v-model="firstName" />
+    <input v-model="firstName" type="text" placeholder="Enter Your Name" />
     <p>Last Name:</p>
-    <input type="text" placeholder="Enter Your Surname" v-model="lastName" />
+    <input v-model="lastName" type="text" placeholder="Enter Your Surname" />
 
     <div class="mb-3">
-      <label for="exampleFormControlInput1" class="form-label">Email address:</label>
+      <label for="exampleFormControlInput1" class="form-label"
+        >Email address:</label
+      >
       <input
         v-model="emailAdd"
         class="form-control"
@@ -15,20 +17,29 @@
       />
     </div>
     <div class="form-floating">
-  <input type="password" class="form-control" id="floatingPassword" placeholder="Password" v-model="userPass">
-  <label for="floatingPassword">Password</label>
-</div>
+      <input
+        v-model="userPass"
+        type="password"
+        class="form-control"
+        id="floatingPassword"
+        placeholder="Password"
+      />
+      <label for="floatingPassword">Password</label>
+    </div>
     <p>Select Gender</p>
 
-    <input type="checkbox" id="female" value="Female" v-model="gender" />
+    <input v-model="gender" type="radio" name="gender" value="Female" />
     <label for="female">Female</label>
 
-    <input type="checkbox" id="John" value="Male" v-model="gender" />
+    <input v-model="gender" type="radio" name="gender" value="Male" />
     <label for="male">Male</label>
 
-    <input type="checkbox" id="other" value="Other" v-model="gender" />
+    <input v-model="gender" type="radio" name="gender" value="Other" />
     <label for="other">Other</label>
 
+    <div>
+      <p class="lead">{{ message }}</p>
+    </div>
     <div class="col-12">
       <button class="btn btn-primary" type="submit">
         Click here to register
@@ -38,34 +49,33 @@
 </template>
 
 <script>
-export default{
-  data(){
-    return{
-      Name: "",
-      Surname:"",
-      Email:"",
-      Password:"",
-      gender:[]
-    }
+export default {
+  data() {
+    return {
+      firstName: "",
+      lastName: "",
+      emailAdd: "",
+      userPass: "",
+      gender: "",
+    };
   },
-  computed:{
-    message(){
-      return this.$store.state.message
-    }
+  computed: {
+    message() {
+      return this.$store.state.message;
+    },
   },
-  methods:{
-    register(){
-      this.$store.dispatch('createUser',{
-        Name: this.Name,
-        Surname: this.Surname,
-        Email: this.Email,
-        Password: this.Password,
-        gender: this.gender
-
-      })
-    }
-  }
-}
+  methods: {
+    register() {
+      this.$store.dispatch("createUser", {
+        firstName: this.firstName,
+        lastName: this.lastName,
+        emailAdd: this.emailAdd,
+        userPass: this.userPass,
+        gender: this.gender,
+      });
+    },
+  },
+};
 </script>
 
 <style scoped></style>
