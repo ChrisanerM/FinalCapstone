@@ -1,4 +1,5 @@
 <template>
+  <div class="container">
   <form @submit.prevent="register">
     <p>First Name:</p>
     <input v-model="firstName" type="text" placeholder="Enter Your Name" />
@@ -46,6 +47,7 @@
       </button>
     </div>
   </form>
+  </div>
 </template>
 
 <script>
@@ -78,4 +80,8 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+.container{
+  width:50rem;
+}
+</style>

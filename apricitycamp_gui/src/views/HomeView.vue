@@ -1,8 +1,5 @@
 <template>
-  <button class="login"><router-link to="/login"> Login </router-link></button>
-  <button class="register">
-    <router-link to="/register"> Create An Account </router-link>
-  </button>
+  <router-link to="/admin"><button>View admin</button></router-link>
   <div
     id="carouselExampleIndicators"
     class="carousel slide"

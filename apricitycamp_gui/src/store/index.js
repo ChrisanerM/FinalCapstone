@@ -72,7 +72,7 @@ export default createStore({
     const {msg,err} = await res.data;
     if (msg){
       context.commit('setMessage',msg)
-    } else {
+    } else {  
       context.commit('setMessage', err)
     }
 },

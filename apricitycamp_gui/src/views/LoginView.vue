@@ -1,4 +1,5 @@
 <template>
+  <div class="container">
   <form @submit.prevent="login">
     <div class="mb-3">
       <label for="exampleFormControlInput1" class="form-label"
@@ -21,13 +22,12 @@
       />
       <label for="floatingPassword">Password</label>
     </div>
-    <div>
-      <p class="lead">{{ message }}</p>
-    </div>
     <div class="col-12">
       <button class="btn btn-primary" type="submit">Click here to login</button>
+      <router-link to="/register" ><button class="btn btn-primary" type="submit">Not Registered? Click here</button></router-link>
     </div>
   </form>
+  </div>
 </template>
 
 <script>
@@ -39,9 +39,6 @@ export default {
     };
   },
   computed: {
-    message() {
-      return this.$store.state.message;
-    },
     user() {
       return this.$store.state.user;
     },
@@ -57,4 +54,9 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style scoped>
+.container{
+  width:50rem;
+}
+
+</style>

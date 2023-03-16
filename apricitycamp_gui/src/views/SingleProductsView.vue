@@ -7,6 +7,7 @@
     <p class="card-text">Description:{{ product.prodDescription }}</p>
     <p class="card-text">Category:{{ product.category }}</p>
     <p class="card-text">Quantity:{{ product.prodQuantity }}</p>
+    <button class="products"><router-link to="/products"> Back to all products </router-link></button>
   </div>
 </div>
 
@@ -30,6 +31,9 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
-
+<style scoped>
+.card{
+  margin-left: 40rem;
+  justify-content: center;
+}
 </style>

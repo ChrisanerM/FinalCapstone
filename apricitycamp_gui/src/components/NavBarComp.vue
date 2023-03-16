@@ -5,6 +5,7 @@
     </div>
   
   <ul class="nav justify-content-end">
+   <router-link to="/login"> <img src="https://i.postimg.cc/SxshZBFb/istockphoto-1337144146-612x612.jpg" style="width:40px; height:6vh; border-radius:50px;"></router-link>
       
     <li class="nav-item">
       <router-link to="/"> Home
@@ -53,8 +54,6 @@
   }
   
   .nav-item {
-  
-    margin-bottom: 10px;
     margin-left: 30px;
     font-size: 25px;
     font-weight: bold;
@@ -79,7 +78,7 @@
 
 .nav {
   background-color: #f9f3c0;
-  height:74px;
+  height:70px;
   }
 
 img{
