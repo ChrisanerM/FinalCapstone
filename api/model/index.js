@@ -50,7 +50,7 @@ class User {
   fetchUsers(req, res) {
     const strQry = `
 SELECT 
-    firstName,lastName,gender,emailAdd,userRole,UserProfile
+    userID, firstName,lastName,gender,emailAdd,userRole,UserProfile
     FROM Users
 `;
     db.query(strQry, (err, data) => {
