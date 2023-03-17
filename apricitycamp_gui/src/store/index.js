@@ -33,13 +33,36 @@ export default createStore({
   },
   actions: {
     async fetchUsers (context){
-      const res= await axios.get (`${apricityURL}users`);
-      if (res.data){
-        context.commit('setUsers',res.data)
+      const res= await axios.get(`${apricityURL}users`);
+      const {results,err}= await res.data;
+      console.log(results);
+      if (results){
+        context.commit('setUsers',results)
       } else {
-        context.commit('setMessage', 'An error occurred')
+        context.commit('setMessage', err)
       }
   },
+    async deleteUser (context){
+      const res= await axios.delete(`${apricityURL}users`);
+      const {results,err}= await res.data;
+      console.log(results);
+      if (results){
+        context.commit('setUsers',results)
+      } else {
+        context.commit('setMessage', err)
+      }
+  },
+    async updateUser (context){
+      const res= await axios.put(`${apricityURL}users`);
+      const {results,err}= await res.data;
+      console.log(results);
+      if (results){
+        context.commit('setUsers',results)
+      } else {
+        context.commit('setMessage', err)
+      }
+  },
+  
     async fetchProducts (context){
       const res= await axios.get(`${apricityURL}products`);
       const {results,err}= await res.data;
@@ -51,6 +74,34 @@ export default createStore({
   },
   async fetchProduct(context, id){
     const res= await axios.get(`${apricityURL}product/${id}`);
+    const {results,err}= await res.data;
+    if (results){
+      context.commit('setProduct',results[0])
+    } else {
+      context.commit('setMessage',err)
+    }
+}, 
+async addProduct (context){
+  const res= await axios.post(`${apricityURL}product`);
+  const {msg,err} = await res.data;
+  if (msg){
+    context.commit('setMessage',msg)
+  } else {
+    context.commit('setMessage', err)
+  }
+},
+async updateProduct(context){
+  const res= await axios.post(`${apricityURL}product`);
+  const {msg,err} = await res.data;
+  if (msg){
+    context.commit('setMessage',msg)
+  } else {
+    context.commit('setMessage', err)
+  }
+},
+
+  async deleteProduct(context, id){
+    const res= await axios.delete(`${apricityURL}product/${id}`);
     const {results,err}= await res.data;
     if (results){
       context.commit('setProduct',results[0])
@@ -72,6 +123,7 @@ export default createStore({
     const {msg,err} = await res.data;
     if (msg){
       context.commit('setMessage',msg)
+      console.log(msg);
     } else {  
       context.commit('setMessage', err)
     }

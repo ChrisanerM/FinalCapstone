@@ -46,6 +46,26 @@ const routes = [
     path: '/singleview/:id',
     name: 'singleview',
     component: () => import( '../views/SingleProductsView.vue')
+  },
+  {
+    path: '/user/:id',
+    name: 'deleteuser',
+    component: () => import( '../components/DeleteUser.vue')
+  },
+  {
+    path: '/user/:id',
+    name: 'adduser',
+    component: () => import( '../components/AddUser.vue')
+  },
+  {
+    path: '/product/:id',
+    name: 'deleteproduct',
+    component: () => import( '../components/DeleteProduct.vue')
+  },
+  {
+    path: '/product/:id',
+    name: 'addProduct',
+    component: () => import( '../components/AddProduct.vue')
   }
 ]
 
