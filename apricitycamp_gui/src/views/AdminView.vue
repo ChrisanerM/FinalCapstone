@@ -1,5 +1,7 @@
 <template>
+  <AddProducts/>
   <h1>Admin Page</h1>
+  <button v-on:click="addProduct" class="btn btn-secondary">Add Product</button>
   <td>
     <table class="list" id="adminList">
       <thead>
@@ -8,13 +10,11 @@
           <th>Name</th>
           <th>Category</th>
           <th>Price</th>
-          <th>Decription</th>
+          <th>Description</th>
           <th>Image</th>
-          <th>Quantiy</th>
-          <div>
+          <th>Quantity</th>
           <th>Action1</th>
           <th>Action2</th>
-        </div>
         </tr>
       </thead>
       <tbody>
@@ -24,7 +24,6 @@
           <td>{{ product.category }}</td>
           <td>R{{ product.price }}</td>
           <td>{{ product.prodDescription }}</td>
-          <td>R{{ product.prodQuantity }}</td>
           <td>
             <img
               :src="product.imgURL"
@@ -33,11 +32,9 @@
               style="width: 55px; height: 60px"
             />
           </td>
-          <div>
-            <input v-model="newProd"/>
-          <td><button class="btn btn-success"> Edit </button></td>
-          <td><button class="btn btn-danger"> Delete </button></td>
-          <td></td></div>
+          <td>R{{ product.prodQuantity }}</td>
+          <td><button class="btn btn-success">Edit</button></td>
+          <td><button class="btn btn-danger">Delete</button></td>
         </tr>
       </tbody>
     </table>
@@ -56,8 +53,8 @@
           <th>emailAdd</th>
           <th>userRole</th>
           <th>userProfile</th>
-          <th> <button class="btn btn-success"> Delete </button></th>
-          <th> <button class="btn btn-danger"> Edit </button></th>
+          <th><button class="btn btn-success">Delete</button></th>
+          <th><button class="btn btn-danger">Edit</button></th>
         </tr>
       </thead>
       <tbody>
@@ -69,7 +66,6 @@
           <td>{{ user.emailAdd }}</td>
           <td>{{ user.userRole }}</td>
           <td>{{ user.userProfile }}</td>
-         
         </tr>
       </tbody>
     </table>
@@ -79,31 +75,22 @@
 <script>
 import { computed } from "@vue/runtime-core";
 import { useStore } from "vuex";
-export default{
+import AddProducts from '../components/AddProduct.vue'
+export default {
   setup() {
     const store = useStore();
     store.dispatch("fetchProducts");
     store.dispatch("fetchUsers");
-    // store.dispatch("deleteUsers");
-    // store.dispatch("deleteProduct");
-    // store.dispatch("updateUsers");
-    // store.dispatch("updateUsers");
     const products = computed(() => store.state.products);
-    // const delprod = computed(() => store.state.products);
-    // const editprod = computed(() => store.state.editprod);
     const Users = computed(() => store.state.users);
-    // const del = computed(() => store.state.users);
-    // const edit = computed(() => store.state.users);
     return {
       products,
-      // delprod,
-      // editprod,
       Users,
-      // del,
-      // edit,
-
     };
   },
+  components:{
+    AddProducts,
+  }
 };
 </script>
 

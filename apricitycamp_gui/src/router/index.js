@@ -63,7 +63,7 @@ const routes = [
     component: () => import( '../components/DeleteProduct.vue')
   },
   {
-    path: '/product/:id',
+    path: '/product',
     name: 'addProduct',
     component: () => import( '../components/AddProduct.vue')
   }

@@ -8,7 +8,9 @@ export default createStore({
     products:null,
     product:null,
     showSpinner:true,
-    message:null
+    message:null,
+    count: 0,
+    list: []
   },
   getters: {
   },
@@ -28,8 +30,7 @@ export default createStore({
     },
     setMessage(state,message){
       state.message= message
-    }
-    
+    },
   },
   actions: {
     async fetchUsers (context){
