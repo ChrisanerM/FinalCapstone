@@ -1,8 +1,7 @@
 <template>
-  <AddProducts/>
   <h1>Admin Page</h1>
-  <button v-on:click="addProduct" class="btn btn-secondary">Add Product</button>
-  <td>
+<button class="btn btn-secondary">Add Product<AddProduct/></button>  
+<td>
     <table class="list" id="adminList">
       <thead>
         <tr>
@@ -22,7 +21,7 @@
           <td>{{ product.id }}</td>
           <td>{{ product.prodName }}</td>
           <td>{{ product.category }}</td>
-          <td>R{{ product.price }}</td>
+          <td>R{{ product.price }}</td> 
           <td>{{ product.prodDescription }}</td>
           <td>
             <img
@@ -32,7 +31,7 @@
               style="width: 55px; height: 60px"
             />
           </td>
-          <td>R{{ product.prodQuantity }}</td>
+          <td>{{ product.prodQuantity }}</td>
           <td><button class="btn btn-success">Edit</button></td>
           <td><button class="btn btn-danger">Delete</button></td>
         </tr>
@@ -75,7 +74,7 @@
 <script>
 import { computed } from "@vue/runtime-core";
 import { useStore } from "vuex";
-import AddProducts from '../components/AddProduct.vue'
+import AddProduct from "../components/AddProduct.vue"
 export default {
   setup() {
     const store = useStore();
@@ -83,14 +82,22 @@ export default {
     store.dispatch("fetchUsers");
     const products = computed(() => store.state.products);
     const Users = computed(() => store.state.users);
+    const add = computed(() => store.state.product);
     return {
       products,
       Users,
+      add
     };
   },
+  computed: {
+    message() {
+      return this.$store.state.message;
+    },
+  },
   components:{
-    AddProducts,
+    AddProduct
   }
+  
 };
 </script>
 

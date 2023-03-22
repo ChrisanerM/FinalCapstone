@@ -9,8 +9,6 @@ export default createStore({
     product:null,
     showSpinner:true,
     message:null,
-    count: 0,
-    list: []
   },
   getters: {
   },
