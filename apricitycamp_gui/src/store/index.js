@@ -29,6 +29,9 @@ export default createStore({
     setMessage(state,message){
       state.message= message
     },
+    setSpinner(state,showSpinner){
+      state.showSpinner= showSpinner
+    },
   },
   actions: {
     async fetchUsers (context){
@@ -82,7 +85,7 @@ export default createStore({
 }, 
 async addProduct (context){
   const res= await axios.post(`${apricityURL}product`);
-  const {msg,err} = await res.data;
+  const {msg,err} = await res.body;
   if (msg){
     context.commit('setMessage',msg)
   } else {

@@ -1,29 +1,46 @@
 <template>
   <div class="about" id="ab">
-    <img src="https://i.postimg.cc/2y4X5Pw0/zach-betten-KYTT8-L5-JLDs-unsplash.jpg" />
+    <img
+      src="https://i.postimg.cc/2y4X5Pw0/zach-betten-KYTT8-L5-JLDs-unsplash.jpg"
+    />
   </div>
   <div class="text-block">
     <h2>About Us</h2>
     <p class="More">
-      Lorem ipsum dolor sit amet. Eum magni voluptate qui maxime 
-delectus et error blanditiis sit eaque consequuntur et delectus 
-nulla hic necessitatibus consequatur ut earum unde. Et autem corrupti 
-quo velit possimus et explicabo sint et porro incidunt. Ut nihil atque 
-et sequi quae et quaerat enim!
+      Apricity means the feel of the sun during winter and that's exaclty the experience we strive to bring.
+      Apricity Camp is a private, spacious and animal friendly camping site. We
+      are situated on the banks of Bergriver. The campsite aims to provide you
+      with a safe space to rest after you have expolred the wonders of the
+      surroundings. It is ideal for 6-8 people and includes electricity, warm
+      water, showers and flush toilets. We also provide the basic amenities in
+      an enclosed kitchen. The area is surrounded with a beautiful river, rock
+      formations, fynbos. The campsite is real serene the perfect getaway! 
+      </p>
 
-Eos quia molestiae ex magnam placeat id odio aliquid eos delectus fugiat est error distinctio! Ut consectetur 
-delectus rem deserunt iste eos mollitia temporibus aut magni ipsam in quae minus.
 
-Et odit internos sed sequi iste aut quia corporis est sint porro ut sapiente optio. Ad accusamus architecto 
-qui galisum voluptatem id dolorem animi in omnis culpa et ratione sint.
-    </p>
   </div>
 </template>
 
-<script>
-
-</script>
+<script></script>
 
 <style>
-
+.about img {
+  height: 55vh;
+  margin-right: 50rem;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.text-block {
+  background-color: #dddbd9;
+  position: absolute;
+  width: 54%;
+  height: 45vh;
+  top: 14rem;
+  left: 40rem;
+  padding: 6px;
+  color: black;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-style: italic;
+  font-size: 20px;
+}
 </style>

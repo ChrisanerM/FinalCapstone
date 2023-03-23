@@ -12,10 +12,10 @@
           ></button>
         </div>
         <div class="modal-body">
-          <form @submit.prevent="addProduct">
+          <form @submit.prevent="adds">
             <p>Product Name:</p>
             <input
-              v-model="productName"
+              v-model="prodName"
               type="text"
               placeholder="Product Name"
             />
@@ -28,9 +28,9 @@
             <p>Price:</p>
             <input v-model="price" type="text" placeholder="e.g R150" />
             <p>Descrip:</p>
-            <input v-model="descrip" type="text" placeholder="Description" />
+            <input v-model="prodDescription" type="text" placeholder="Description" />
             <p>Quantity:</p>
-            <input v-model="quantity" type="text" placeholder="1-50" />
+            <input v-model="prodQuantity" type="text" placeholder="1-50" />
           </form>
         </div>
         <div class="modal-footer">
@@ -53,10 +53,10 @@
 export default {
   data() {
     return {
-      productName: "",
+      prodName: "",
       category: "",
-      descrip: "",
-      quantity: "",
+      prodDescription: "",
+      prodQuantity: "",
       price: "",
     };
   },
@@ -67,17 +67,16 @@ export default {
   },
 
   methods: {
-    addProduct() {
+    adds() {
       this.$store.dispatch("addProduct", {
-        productName: this.productName,
+        prodName: this.prodName,
         category: this.category,
         price: this.price,
-        descrip: this.descrip,
-        quantity: this.quantity,
+        prodDescription: this.prodDescription,
+        prodQuantity: this.prodQuantity,
       });
     },
   },
-  name: 'addProduct',
 };
 </script>
 

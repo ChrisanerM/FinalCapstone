@@ -5,7 +5,7 @@
     </div>
   
   <ul class="nav justify-content-end">
-   <router-link to="/login"> <img src="https://i.postimg.cc/SxshZBFb/istockphoto-1337144146-612x612.jpg" style="width:40px; height:6vh; border-radius:50px;"></router-link>
+   <router-link to="/login"><h7>Sign-up</h7> <router-link to='/register'><h7>|Register</h7></router-link> <img src="https://i.postimg.cc/SxshZBFb/istockphoto-1337144146-612x612.jpg" style="width:40px; height:6vh; border-radius:50px;"></router-link>
       
     <li class="nav-item">
       <router-link to="/"> Home
@@ -78,11 +78,16 @@
 
 .nav {
   background-color: #f9f3c0;
-  height:70px;
+  height:74px;
   }
 
 img{
   height: 20vh;
+}
+
+h7{
+  font-size:15px;
+  font-weight: bold;
 }
   
   </style>

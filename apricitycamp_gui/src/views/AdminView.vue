@@ -1,7 +1,11 @@
 <template>
   <h1>Admin Page</h1>
-<button class="btn btn-secondary">Add Product<AddProduct/></button>  
-<td>
+  <div class="add">
+  <button type="submit" class="btn btn-secondary">Add Product</button>
+  <AddProduct/>  
+</div>
+  <td>
+
     <table class="list" id="adminList">
       <thead>
         <tr>
@@ -82,11 +86,9 @@ export default {
     store.dispatch("fetchUsers");
     const products = computed(() => store.state.products);
     const Users = computed(() => store.state.users);
-    const add = computed(() => store.state.product);
     return {
       products,
       Users,
-      add
     };
   },
   computed: {

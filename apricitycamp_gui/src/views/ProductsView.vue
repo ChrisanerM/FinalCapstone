@@ -21,9 +21,8 @@
             <p class="name">{{ product.prodName }}</p>
             <p class="price">R{{ product.price }}</p>
             <!-- <RouterLink> -->
-            <button class="view">
-              <router-link :to="{name: 'singleview', params: {id: product.id}}"> View more </router-link>
-            </button>
+
+             <button class="more"> <router-link class="view" :to="{name: 'singleview', params: {id: product.id}}"> View more </router-link></button>
             <!-- </RouterLink> -->
           </div>
         </div>
@@ -47,4 +46,39 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+.card-body{
+  text-decoration: none;
+}
+.products-page{
+  width:80%;
+  height:80%;
+  margin-left: 10rem;
+  display: grid;
+}
+.card{
+  background-color: rgb(224, 221, 221);
+
+}
+.name{
+  font-size:18px;
+  font-weight: bold;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.price{
+  font-size:18px;
+  font-weight: bold;  
+}
+.view{
+  background-color: black;
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  border-radius: 5px;
+}
+.more{
+  background-color: black;
+  border-radius: 5px;
+}
+
+</style>
