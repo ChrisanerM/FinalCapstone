@@ -1,10 +1,12 @@
 <template>
+<div class="regist">
   <div class="container">
   <form @submit.prevent="register">
+    <h4>Please fill out the form to register:</h4>
     <p>First Name:</p>
-    <input v-model="firstName" type="text" placeholder="Enter Your Name" />
+    <input v-model="firstName"  class="form-control" id="exampleFormControlInput1" type="text" placeholder="Enter Your Name" />
     <p>Last Name:</p>
-    <input v-model="lastName" type="text" placeholder="Enter Your Surname" />
+    <input v-model="lastName" class="form-control" id="exampleFormControlInput1" type="text" placeholder="Enter Your Surname" />
 
     <div class="mb-3">
       <label for="exampleFormControlInput1" class="form-label"
@@ -48,6 +50,7 @@
     </div>
   </form>
   </div>
+  </div>
 </template>
 
 <script>
@@ -81,7 +84,19 @@ export default {
 </script>
 
 <style scoped>
+.regist{
+  background: url("https://i.postimg.cc/ncWfDgCB/johannes-plenio-Rw-Hv7-Lge-C7s-unsplash.jpg")
+    no-repeat;
+  background-size: cover;
+}
 .container{
   width:50rem;
+  height:80vh;
+  background-color: whitesmoke;
+  border-radius: 25px;
+}
+.btn{
+  background-color: rgb(225, 159, 78);
+  border-color: rgb(225, 159, 78);
 }
 </style>

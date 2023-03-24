@@ -24,18 +24,21 @@
 <script></script>
 
 <style>
+
+#ab{
+  height:78vh;
+}
 .about img {
-  height: 55vh;
-  margin-right: 50rem;
-  margin-top: 30px;
-  margin-bottom: 30px;
+  height: 65vh;
+  margin-right: 55rem;
+  margin-top:4rem;
 }
 .text-block {
   background-color: #dddbd9;
   position: absolute;
   width: 54%;
   height: 45vh;
-  top: 14rem;
+  top: 17rem;
   left: 40rem;
   padding: 6px;
   color: black;

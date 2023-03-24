@@ -5,12 +5,6 @@
         <div class="container">
           <div class="footer-day-time">
             <div class="row">
-              <div class="col-md-8">
-                <ul>
-                  <li>Opening Hours: Mon - Friday: 8AM - 5PM</li>
-                  <li>Sunday: 8:00 AM - 12:00 PM</li>
-                </ul>
-              </div>
             </div>
           </div>
           <div class="row">
@@ -18,16 +12,14 @@
               <h4>Information</h4>
               <ul class="address1">
                 <li>
-                  <i class="fa fa-map-marker"></i>111 Buitekant Street Cape Town
+                  <i class="fa fa-map-marker"></i>Head office-111 Buitekant Street Cape Town
                 </li>
                 <li>
                   <i class="fa fa-envelope"></i
                   ><a href="mailto:#">apricitycamp.co.za</a>
                 </li>
-                <h4 class>&copy; 2023 Apricity Camp</h4>
               </ul>
             </div>
-
             <div class="col-md-4">
               <h4>Follow us</h4>
               <ul class="social-icon">
@@ -49,6 +41,8 @@
               </ul>
             </div>
           </div>
+          <h4 class="copyright">&copy; 2023 Apricity Camp</h4>
+
         </div>
       </div>
     </footer>
@@ -64,10 +58,13 @@ footer {
   background-color: #403f3f;
   color: white;
   width: 100%;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  padding:10px;
 }
 
 ul {
   padding: 0px;
+  /* margin-left: 10rem; */
 }
 ol,
 ul {
@@ -128,5 +125,13 @@ footer .social-icon li i:hover {
 .social-icon a {
   color: black;
   font-size: 20px;
+}
+
+.copyright{
+  font-size: 15px;
+  justify-content:center;
+}
+.col-md-4{
+  margin-left: 10rem;
 }
 </style>

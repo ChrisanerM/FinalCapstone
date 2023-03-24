@@ -1,5 +1,7 @@
 <template>
+  <div class="login">
   <div class="container">
+    <h4>Please login here:</h4>
   <form @submit.prevent="login">
     <div class="mb-3">
       <label for="exampleFormControlInput1" class="form-label"
@@ -28,6 +30,7 @@
     </div>
   </form>
   </div>
+  </div>
 </template>
 
 <script>
@@ -55,8 +58,21 @@ export default {
 </script>
 
 <style scoped>
-.container{
-  width:50rem;
+.login{
+  background: url("https://i.postimg.cc/ncWfDgCB/johannes-plenio-Rw-Hv7-Lge-C7s-unsplash.jpg")
+    no-repeat;
+  background-size: cover;
+  height:75vh;
 }
+.container{
+  background-color: whitesmoke;
+  width:40rem;
+  height:60vh;
+}
+.btn{
+  background-color: rgb(225, 159, 78);
+  border-color: rgb(225, 159, 78);
+}
+
 
 </style>

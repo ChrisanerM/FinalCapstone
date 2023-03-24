@@ -1,8 +1,7 @@
 <template>
-  <div>
-    <h2>Products</h2>
+  <div class="allprod">
 
-    <div class="products-page">
+    <div class="products-page grid">
       <h1>Browse through our Products:</h1>
       <div class="row">
         <div
@@ -47,6 +46,10 @@ export default {
 </script>
 
 <style scoped>
+.allprod{
+display: grid;
+margin-top: 45px;
+}
 .card-body{
   text-decoration: none;
 }
@@ -55,9 +58,12 @@ export default {
   height:80%;
   margin-left: 10rem;
   display: grid;
+  font-family:  Georgia, "Times New Roman", Times, serif;
+  font-style: italic;
+  margin-top: 15px;
 }
 .card{
-  background-color: rgb(224, 221, 221);
+  background-color: rgb(255, 255, 255);
 
 }
 .name{
@@ -79,6 +85,9 @@ export default {
 .more{
   background-color: black;
   border-radius: 5px;
+}
+.card-body{
+  font-family:  Georgia, "Times New Roman", Times, serif;
 }
 
 </style>

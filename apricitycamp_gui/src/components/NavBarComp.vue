@@ -5,31 +5,37 @@
     </div>
   
   <ul class="nav justify-content-end">
-   <router-link to="/login"><h7>Sign-up</h7> <router-link to='/register'><h7>|Register</h7></router-link> <img src="https://i.postimg.cc/SxshZBFb/istockphoto-1337144146-612x612.jpg" style="width:40px; height:6vh; border-radius:50px;"></router-link>
+   <router-link to="/login"><h7>Login</h7> <router-link to='/register'><h7>|Register</h7></router-link> <img src="https://i.postimg.cc/SxshZBFb/istockphoto-1337144146-612x612.jpg" style="width:40px; height:6vh; border-radius:50px;"></router-link>
       
     <li class="nav-item">
       <router-link to="/"> Home
   
-  </router-link> | 
+  </router-link>  
       
     </li>
     <li class="nav-item">
       <router-link to="/about"> About
   
-  </router-link> | 
+  </router-link> 
       
     </li>
     <li class="nav-item">
       <router-link to="/products"> Purchase Here
         
-  </router-link> |
+  </router-link> 
+      
+    </li>
+    <li class="nav-item">
+      <router-link to="/admin"> Admin
+        
+  </router-link> 
       
     </li>
     
     <li class="nav-item">
       <router-link to="/contact"> Contact
         
-  </router-link> |
+  </router-link> 
       
     </li>
     
@@ -55,7 +61,7 @@
   
   .nav-item {
     margin-left: 30px;
-    font-size: 25px;
+    font-size: 20px;
     font-weight: bold;
   }
   
@@ -77,8 +83,8 @@
 }
 
 .nav {
-  background-color: #f9f3c0;
-  height:74px;
+  background-color: #f0d699;
+  height:70px;
   }
 
 img{
@@ -86,7 +92,7 @@ img{
 }
 
 h7{
-  font-size:15px;
+  font-size:13px;
   font-weight: bold;
 }
   

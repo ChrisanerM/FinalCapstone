@@ -1,5 +1,4 @@
 <template>
-  <router-link to="/admin"><button>View admin</button></router-link>
   <div
     id="carouselExampleIndicators"
     class="carousel slide"

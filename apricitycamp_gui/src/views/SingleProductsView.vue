@@ -1,4 +1,5 @@
 <template>
+  <div class="singlep">
    <div class="card"
    style="width: 18rem;">
   <img
@@ -9,6 +10,7 @@
     <p class="card-text">Quantity:{{ product.prodQuantity }}</p>
     <button class="products"><router-link to="/products"> Back to all products </router-link></button>
   </div>
+</div>
 </div>
 
 
@@ -32,8 +34,19 @@ export default {
 </script>
 
 <style scoped>
+.singlep{
+  height: 80vh;
+}
 .card{
   margin-left: 40rem;
   justify-content: center;
 }
+.products{
+  background-color: black;
+  text-decoration: none;
+}
+.card-text{
+  font-family:  Georgia, "Times New Roman", Times, serif;
+}
+
 </style>
